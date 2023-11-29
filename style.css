@@ -348,38 +348,46 @@ hr {
   -moz-transition-property: top, left;
 }
 .tile.tile-2 {
-  background: url(https://i.pinimg.com/474x/91/0c/9c/910c9c319b4b63453389515334415478.jpg);
+  background: url(https://i.pinimg.com/originals/4e/32/d1/4e32d15a48fd2a16f881dee2f4dfdccb.png);
   background-size: cover;
+  background-position: center;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 .tile.tile-4 {
-  background: url(https://i.pinimg.com/564x/68/c6/e2/68c6e2bbd7ad14ceeae82a00912643d0.jpg);
-  background-size: cover;
+  background: url(https://i.pinimg.com/originals/f9/ee/1a/f9ee1a3e4cb6566b31082a050ae0e758.png);
+  background-size: 110px;
+  background-position-x: center;
+  background-position-y: center;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
 }
 .tile.tile-8 {
-  background: url(https://i.pinimg.com/564x/65/aa/f1/65aaf147614f6048c8b6cc78d10df9e9.jpg);
+  background: url(https://i.pinimg.com/originals/27/a2/74/27a274bcc5152f39fb50df4ea6c4b8b0.jpg);
   background-size: cover;
+  background-position-x: 30%;
+  background-position-y: 25%;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
 }
 .tile.tile-16 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
-  background-size: cover;
+  background: url(https://i.pinimg.com/originals/81/51/f6/8151f6d3e97637fb1a70520195308da6.png);
+  background-size: 125px;
+  background-position: center;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
 }
 .tile.tile-32 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
-  background-size: cover;
-  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 255, 255, 0);
-}
-.tile.tile-64 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
+  background: url(https://i.pinimg.com/originals/eb/fe/26/ebfe26668ea3a21a3fb6e613de1858c5.jpg);
   background-size: cover;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
+.tile.tile-64 {
+  background: url(https://i.pinimg.com/originals/40/da/8b/40da8bcd3af77f332e198035461c9d90.png);
+  background-size: 125px;
+  background-position: center;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 255, 255, 0);
+}
 .tile.tile-128 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
+  background: url(https://i.pinimg.com/originals/eb/52/bb/eb52bb7297b672fd2c7e020a81307566.png);
   background-size: cover;
+  background-position: center;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 480px) {
@@ -388,8 +396,9 @@ hr {
   }
 }
 .tile.tile-256 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
+  background: url(https://i.pinimg.com/originals/bf/98/e5/bf98e5bce4874a2d236b17ec7525e9cb.png);
   background-size: cover;
+  background-position: center;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 0, 0);
 }
 @media screen and (max-width: 480px) {
@@ -398,7 +407,7 @@ hr {
   }
 }
 .tile.tile-512 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
+  background: url(////////);
   background-size: cover;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
@@ -408,7 +417,7 @@ hr {
   }
 }
 .tile.tile-1024 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
+  background: url(////////);
   background-size: cover;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
@@ -418,9 +427,10 @@ hr {
   }
 }
 .tile.tile-2048 {
-  background: url(https://images.genius.com/b7856ba4b9670f426d8b347b3fc20a52.403x363x1.png);
-  background-size: cover;
-  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+  background: url(https://i.pinimg.com/originals/d1/88/10/d188105db7ef12b536f5dbd2ed8edac4.png);
+  background-size: 115px;
+  background-position: center;
+  box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(0, 255, 255, 0);
 }
 @media screen and (max-width: 480px) {
   .tile.tile-2048 {
