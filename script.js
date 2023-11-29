@@ -498,7 +498,7 @@ KeyboardInputManager.prototype.listen = function () {
   });
 
   handler.on("swipe", function (event) {
-    event.gesture.preventDefault();
+    event.gesture.preventDefault(); 
     mapped = gestures.indexOf(event.gesture.direction);
 
     if (mapped !== -1) self.emit("move", mapped);
