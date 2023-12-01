@@ -779,14 +779,3 @@ hr {
   .game-message .lower {
     margin-top: 30px !important;
   }
-/* Overlay styles */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  display: none; /* Initially hidden */
-  z-index: 999; /* Ensures it's on top of other elements */
-}
