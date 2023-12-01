@@ -536,16 +536,3 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
-
-
-// Function to check if the document is in fullscreen mode
-function isFullScreen() {
-  return (
-    document.fullscreenElement ||
-    document.webkitFullscreenElement ||
-    document.mozFullScreenElement ||
-    document.msFullscreenElement
-  );
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2772286542544679"
-     crossorigin="anonymous"></script>
