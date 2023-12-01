@@ -536,3 +536,36 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
+
+
+// Function to check if the document is in fullscreen mode
+function isFullScreen() {
+  return (
+    document.fullscreenElement ||
+    document.webkitFullscreenElement ||
+    document.mozFullScreenElement ||
+    document.msFullscreenElement
+  );
+}
+
+// Function to handle showing/hiding the overlay based on fullscreen status
+function handleOverlay() {
+  const overlay = document.getElementById('overlay');
+  
+  // Check if not in fullscreen, then show the overlay
+  if (!isFullScreen()) {
+    overlay.style.display = 'block';
+  } else {
+    overlay.style.display = 'none';
+  }
+}
+
+// Event listener for fullscreen change
+document.addEventListener('fullscreenchange', handleOverlay);
+document.addEventListener('webkitfullscreenchange', handleOverlay);
+document.addEventListener('mozfullscreenchange', handleOverlay);
+document.addEventListener('MSFullscreenChange', handleOverlay);
+
+// Initial check to show/hide overlay based on initial fullscreen status
+handleOverlay();
+
