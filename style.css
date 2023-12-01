@@ -1,9 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Slackey);
 html, body {
   margin: 0;
-  padding: 0;
-  background: #FFFFFF;
-  color: #000000;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  padding: 50;
+  background: #3692ff;
+  color: #001e51;
+  font-family: 'Slackey',sans-serif;
   font-size: 18px;
 }
 
@@ -59,10 +60,11 @@ h1.title {
   }
 }
 .score-container {
-  position: relative;
+  position: absolute;
+  top: 37px; right: 450px;
   float: right;
   background: #bbada0;
-  padding: 15px 25px;
+  padding: 20px 30px;
   font-size: 25px;
   height: 25px;
   line-height: 47px;
@@ -74,14 +76,14 @@ h1.title {
 .score-container:after {
   position: absolute;
   width: 100%;
-  top: 10px;
+  top: 5px;
   left: 0;
   content: "Score";
   text-transform: uppercase;
   font-size: 13px;
   line-height: 13px;
   text-align: center;
-  color: #000000;
+  color: #001e51;
 }
 .score-container .score-addition {
   position: absolute;
@@ -123,7 +125,7 @@ hr {
 }
 
 .container {
-  width: 500px;
+  width: 470px;
   margin: 0 auto;
 }
 
@@ -407,8 +409,9 @@ hr {
   }
 }
 .tile.tile-512 {
-  background: url(////////);
+  background: url(https://i.pinimg.com/originals/71/b3/1e/71b31e9c66f97693be0a164cf684403c.jpg);
   background-size: cover;
+  background-position-y: 43%;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 @media screen and (max-width: 480px) {
@@ -417,8 +420,10 @@ hr {
   }
 }
 .tile.tile-1024 {
-  background: url(////////);
-  background-size: cover;
+  background: url(https://i.pinimg.com/originals/f4/44/02/f444022f2a6d5f28fba7a69f59c598a9.jpg);
+  background-size: 270px;
+  background-position-x: 45%;
+  background-position-y: 32%;
   box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 @media screen and (max-width: 480px) {
@@ -560,6 +565,7 @@ hr {
 
   h1.title {
     font-size: 50px;
+    
   }
 
   .container {
