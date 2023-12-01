@@ -546,3 +546,6 @@ function isFullScreen() {
     document.mozFullScreenElement ||
     document.msFullscreenElement
   );
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2772286542544679"
+     crossorigin="anonymous"></script>
