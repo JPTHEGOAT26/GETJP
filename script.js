@@ -432,6 +432,29 @@ HTMLActuator.prototype.message = function (won) {
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+  // Get the final score
+  var finalScore = this.score;
+
+  // Send the final score to a Vercel Edge endpoint using fetch
+  fetch('/api/save-score', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ score: finalScore }),
+  });
+  .then(response => {
+    if (response.ok) {
+      // Score successfully sent
+      console.log('Score sent successfully:', finalScore);
+    } else {
+      // Handle error while sending score
+      console.error('Failed to send score:', response.status);
+    };
+  });
+  .catch(error => {
+    console.error('Error sending score:', error);
+  });
 };
 
 HTMLActuator.prototype.clearMessage = function () {
