@@ -536,8 +536,11 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
-const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_API_KEY');
 
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://udxynszabzhljaalbhip.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 function saveGameStateToSupabase(grid, metadata) {
   // Convert the grid and metadata to a format suitable for saving in Supabase
   const gameState = {
