@@ -1,3 +1,4 @@
+const database = firebase.database();
 let scoreText;
 let score = 0;
 document.addEventListener("DOMContentLoaded", function () {
