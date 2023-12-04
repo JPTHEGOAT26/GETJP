@@ -1,3 +1,21 @@
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyCRZRGqhHyc52vjR6_OFaRehrK11bFDC6k",
+    authDomain: "get-hen1.firebaseapp.com",
+    databaseURL: "https://get-hen1-default-rtdb.firebaseio.com",
+    projectId: "get-hen1",
+    storageBucket: "get-hen1.appspot.com",
+    messagingSenderId: "632482183155",
+    appId: "1:632482183155:web:5f4e8e5da9285ae39cc486",
+    measurementId: "G-N7BSD1GZLF"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 let scoreText;
 let score = 0;
 document.addEventListener("DOMContentLoaded", function () {
