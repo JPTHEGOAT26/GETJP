@@ -536,3 +536,38 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
+const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_API_KEY');
+
+function saveGameStateToSupabase(grid, metadata) {
+  // Convert the grid and metadata to a format suitable for saving in Supabase
+  const gameState = {
+    grid: grid.cells, // Example: Save the grid cells
+    score: metadata.score,
+    // Add other necessary game metadata here
+  };
+
+  supabase
+    .from('game_state')
+    .upsert([{ id: 1, state: gameState }])
+    .then(() => console.log('Game state saved to Supabase'))
+    .catch((error) => console.error('Error saving game state:', error));
+}
+function loadGameStateFromSupabase() {
+  supabase
+    .from('game_state')
+    .select()
+    .eq('id', 1) // Assuming you're storing a single game state with ID 1
+    .then((response) => {
+      if (response.body && response.body.length > 0) {
+        const gameState = response.body[0].state;
+        // Update the game with the retrieved state from Supabase
+        // Example: Update grid cells, score, etc.
+      } else {
+        console.log('No saved game state found.');
+        // Initialize a new game if no state is found
+      }
+    })
+    .catch((error) => console.error('Error fetching game state:', error));
+}
+
+
