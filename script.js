@@ -11,11 +11,14 @@ function GameManager(size, InputManager, Actuator) {
   this.size = size; // Size of the grid
   this.inputManager = new InputManager();
   this.actuator = new Actuator();
-
+  
   this.startTiles = 2;
 
   this.inputManager.on("move", this.move.bind(this));
   this.inputManager.on("restart", this.restart.bind(this));
+  this.inputManager.on("move", this.move.bind(this));
+  this.inputManager.on("restart", this.restart.bind(this));
+
 
   this.setup();
 }
@@ -142,6 +145,10 @@ GameManager.prototype.move = function (direction) {
 
     if (!this.movesAvailable()) {
       this.over = true; // Game over!
+      const databaseRef = firebase.database().ref('gameScores');
+      databaseRef.push({
+        score: this.score,
+        });
     }
 
     this.actuate();
