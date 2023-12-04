@@ -149,7 +149,7 @@ GameManager.prototype.move = function (direction) {
       databaseRef.push({
         score: this.score,
         });
-    }
+    };
 
     this.actuate();
   }
