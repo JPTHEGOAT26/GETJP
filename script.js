@@ -550,15 +550,15 @@ function saveGameStateToSupabase(grid, metadata) {
   };
 
   supabase
-    .from('game_state')
-    .upsert([{ id: 1, state: gameState }])
-    .then(() => console.log('Game state saved to Supabase'))
+    .from('game_state');
+    .upsert([{ id: 1, state: gameState }]);
+    .then(() => console.log('Game state saved to Supabase'));
     .catch((error) => console.error('Error saving game state:', error));
-}
+};
 function loadGameStateFromSupabase() {
   supabase
-    .from('game_state')
-    .select()
+    .from('game_state');
+    .select();
     .eq('id', 1) // Assuming you're storing a single game state with ID 1
     .then((response) => {
       if (response.body && response.body.length > 0) {
@@ -568,9 +568,9 @@ function loadGameStateFromSupabase() {
       } else {
         console.log('No saved game state found.');
         // Initialize a new game if no state is found
-      }
-    })
+      };
+    });
     .catch((error) => console.error('Error fetching game state:', error));
-}
+};
 
 
