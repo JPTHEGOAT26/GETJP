@@ -425,9 +425,13 @@ HTMLActuator.prototype.updateScore = function (score) {
 };
 
 HTMLActuator.prototype.message = function (won) {
+  
   var type = won ? "game-won" : "game-over";
   var message = won ? "You win!" : "Game over!";
 
+  firebase.analytics().logEvent('game_end', {
+  game_result: won ? 'win' : 'lose',
+  final_score: this.score
   // if (ga) ga("send", "event", "game", "end", type, this.score);
 
   this.messageContainer.classList.add(type);
